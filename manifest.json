@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Cookie Monster",
+  "description": "",
+  "version": "0.1.0",
+  "icons": {
+    "160": "icon160.png"
+  },
+  "browser_action": {
+    "default_icon": "icon160.png",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true,
+    "open_in_tab": false
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "cookies"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

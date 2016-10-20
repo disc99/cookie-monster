@@ -1,0 +1,43 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    margin-bottom: 30px;
+}
+
+#app {
+    margin-top: 20px;
+}
+
+#app>ul {
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+}
+#app .panel-body li {
+    padding-bottom: 5px;
+}
+
+.cookie-domain {
+    width: 73%;
+}
+
+.cookie-pattern-value {
+    width: 71%    
+}
+
+.cookie-remove, .cookie-pattern-remove {
+    padding-left: 5px;
+}
+
+.cookie-add {
+    padding-right: 30px;
+}
+
+.cookie-pattern-add {
+    padding-right: 22px;
+}
+

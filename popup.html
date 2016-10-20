@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="js/jquery-2.0.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="vue.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/custom.css" rel="stylesheet" media="screen">
+  <link href="popup.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body>
+  <div class="container">
+
+
+    <div id="app">
+      <table>
+        <tr v-for="cookie in cookies">
+          <td><label class="cookie-key">{{cookie.key}}</label></td>
+          <td>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-primary" v-for="pattern in cookie.patterns">
+                <input type="radio" name="options" id="option2" autocomplete="off" > {{pattern.tag}}
+              </label>
+            </div>
+          </td>
+          <td><input v-model="cookie.value" class="form-control" placeholder="Cookie value" /></td>
+        </tr>
+      </table>
+
+
+      <!--<input v-model="newCookie" v-on:keyup.enter="addCookie">-->
+      <!--<ul>
+
+
+
+      
+			<li v-for="cookie in cookies">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<form class="form-inline">
+							<div class="form-group"><input v-model="cookie.key" class="form-control" placeholder="Cookie key" /></div>
+							<div class="form-group cookie-domain"><input v-model="cookie.domain" class="form-control" placeholder="Cookie domain" /></div>
+							<div class="form-group cookie-remove text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+						</form>
+					</div>
+
+
+					<div class="panel-body">
+						<ul>
+							<li v-for="pattern in cookie.patterns">
+								<form class="form-inline">
+									<div class="form-group"><input v-model="pattern.tag" class="form-control" placeholder="Tag" /></div>
+									<div class="form-group cookie-pattern-value"><input v-model="pattern.value" class="form-control" placeholder="Value" /></div>
+									<div class="form-group cookie-pattern-remove text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+								</form>
+							</li>
+							<li><span class="glyphicon glyphicon-plus pull-right cookie-pattern-add text-success" aria-hidden="true"></span></li>
+						</ul>
+					</div>
+
+
+					<!--<span>{{ cookie.text }}</span>-->
+      <!--<button v-on:click="removeCookie($index)">X</button>-->
+      <!--</div>
+			</li>
+			<li><span class="glyphicon glyphicon-plus pull-right cookie-add text-success" aria-hidden="true"></span></li>
+		</ul>-->
+
+{{cookies}}
+<h4>----</h4>
+{{newCookie}}
+    </div>
+
+
+    <script src="popup.js"></script>
+
+  </div>
+</body>
+
+</html>
