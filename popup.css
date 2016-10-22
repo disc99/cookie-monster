@@ -1,15 +1,21 @@
 body {
     width: 100%;
     height: 100%;
-    margin-bottom: 10px;
 }
-ul {
-    padding-left: 0;
+.navbar-nav > li > a {
+    padding-top:5px !important; padding-bottom:5px !important;
 }
-li {
-    margin-top: 10px;
-    list-style-type: none;
+.navbar {
+    min-height:16px !important
 }
-.cookie-key {
-    font-size: 16px;
+
+#cookies {
+    table-layout: auto;    
+}
+.cookie-name {
+}
+.cookie-tag {
+}
+.cookie-value {
+    width: 400px;
 }

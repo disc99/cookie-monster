@@ -4,10 +4,10 @@
   "description": "",
   "version": "0.1.0",
   "icons": {
-    "160": "icon160.png"
+    "160": "img/icon160.png"
   },
   "browser_action": {
-    "default_icon": "icon160.png",
+    "default_icon": "img/icon160.png",
     "default_popup": "popup.html"
   },
   "options_ui": {
@@ -16,7 +16,11 @@
     "open_in_tab": false
   },
   "permissions": [
+    "http://*/*",
+    "https://*/*",
     "activeTab",
+    "tabs",
+    "cookies",
     "storage",
     "cookies"
   ],
